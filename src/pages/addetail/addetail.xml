@@ -1,0 +1,38 @@
+<import src="../common/common.wxml"/>
+
+<view class="nav">
+  <view class="brand-name">{{brandname}}</view>
+  <image class="watch-img" src="../../images/watch.png"></image>
+</view>
+
+<scroll-view scroll-y="true" style="height: 600px;" class="container">
+  <view class="line">
+    <text class="text-left label" selectable="false">联系人</text>
+    <text class="text-left content" selectable="false">{{contact}}</text>
+  </view>
+  <view class="line">
+    <text class="text-left label" selectable="false">电话</text>
+    <text class="text-left content" selectable="false">{{tel}}</text>
+  </view>
+  <view class="line">
+    <text class="text-left label" selectable="false">微信</text>
+    <text class="text-left content" selectable="false">XXX</text>
+  </view>
+  <view class="line">
+    <text class="text-left label" selectable="false">QQ</text>
+    <text class="text-left content" selectable="false">XXX</text>
+  </view>
+  <view class="line">
+    <text class="text-left label" selectable="false">详细介绍</text>
+  </view>
+  <view class="line">
+    <text class="detail-content" selectable="false" space="emsp">{{detail}}</text>
+  </view>
+  <view class="image-content">
+      <image mode="scaleToFill" src="http://nos.netease.com/house-public/242a8e790d9e56b9801d5957035e2a4b.png"></image>
+      <view>
+          <text>诚招优质代理商</text>
+      </view>
+  </view>
+  <template is="footer"></template>
+</scroll-view>

@@ -1,0 +1,93 @@
+<import src="../common/common.wxml"/>
+
+<view class="nav-path">
+  <view class="path-txt">{{mainClassify}}></view>
+</view>
+<view class="menu">
+    <scroll-view scroll-x="true" class="top-nav">
+      <view wx:for="{{subClassify}}" wx:key="idx" wx:for-item="itemName" 
+        bindtap="showDetail" data-classifiy="{{itemName.id}}"  class="top-btn {{itemName.class}}">
+        {{itemName.name}}
+      </view>
+    </scroll-view>
+</view>
+<scroll-view scroll-y="true" style="height: 600px;" class="container">
+  <view class="line toutiao" bindtap="goDetailPage" data-classifiy="breadname">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <view class="line toutiao" bindtap="goDetailPage">
+      <image class="toutiao-img" mode="scaleToFill" src="http://cms-bucket.nosdn.127.net/9523862c5b7d419ab76de79a41ba9a3820171010142756.png"></image>
+      <view class="two-line-text">
+          <text class="text-center txt brandname-card">miraimon</text>
+          <text class="text-center txt summer-card">very very very NB IT company. very very very NB IT company. very very very NB IT company. very very very NB IT company. </text>
+      </view>
+  </view>
+  <template is="footer"></template>
+</scroll-view>

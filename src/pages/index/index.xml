@@ -1,0 +1,86 @@
+<import src="../common/common.wxml"/>
+
+<view class="header">
+  <view class=""></view>
+</view>
+<view class="menu">
+    <scroll-view scroll-x="true" class="top-nav">
+      <view wx:for="{{mainClassify}}" wx:key="idx" wx:for-item="itemName" 
+        bindtap="showDetail" data-classifiy="{{itemName.id}}"  class="top-btn {{itemName.class}}">
+        {{itemName.name}}
+      </view>
+    </scroll-view>
+</view>
+<scroll-view scroll-y="true" class="content">
+    <view class="img-poster">
+        <image mode="scaleToFill" class="actual-img" src="{{showHotResource.titleImage}}"></image>
+    </view>
+    <view class="col3">
+         <view class="col3-h classify-title">
+            <text bindtap="goadlist" data-classifiy="{{showHotResource.hotType1}}">{{showHotResource.hotType1.title}}</text>
+            <icon type="search" size="16" style="float:right"></icon>
+        </view>
+        <scroll-view scroll-x="true" class="col3-img-list">
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType1.top1.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType1.top2.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType1.top3.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType1.top4.smallimageurl}}"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="col3">
+         <view class="col3-h classify-title">
+            <text bindtap="goadlist" data-classifiy="{{showHotResource.hotType2}}">{{showHotResource.hotType2.title}}</text>
+            <icon type="search" size="16" style="float:right"></icon>
+        </view>
+        <scroll-view scroll-x="true" class="col3-img-list">
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType2.top1.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType2.top2.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType2.top3.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType2.top4.smallimageurl}}"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="col3">
+         <view class="col3-h classify-title">
+            <text bindtap="goadlist" data-classifiy="{{showHotResource.hotType3}}">{{showHotResource.hotType3.title}}</text>
+            <icon type="search" size="16" style="float:right"></icon>
+        </view>
+        <scroll-view scroll-x="true" class="col3-img-list">
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType3.top1.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType3.top2.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType3.top3.smallimageurl}}"></image>
+            </view>
+            <view class="col3-img">
+                <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType3.top4.smallimageurl}}"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="nav">
+        <button type="primary" class="tag" size="mini">学生寮</button>
+        <button type="primary" class="tag" size="mini">中古房</button>
+        <button type="primary" class="tag" size="mini">都内学区房</button>
+        <button type="primary" class="tag" size="mini">中料理店</button>
+        <button type="primary" class="tag" size="mini">便利店</button>
+    </view>
+    <template is="footer"></template>
+</scroll-view>

@@ -1,0 +1,5 @@
+<view class="footer">
+    <text class="footer-txt">产品介绍</text>
+    <text class="footer-txt">联系我们</text>
+    <text class="footer-txt">版权所有</text>
+</view>
