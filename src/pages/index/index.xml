@@ -1,9 +1,5 @@
 <import src="../common/common.wxml"/>
-
-<view class="header">
-  <view class=""></view>
-</view>
-<view class="menu">
+<view class="menu {{fixheader}}">
     <scroll-view scroll-x="true" class="top-nav">
       <view wx:for="{{mainClassify}}" wx:key="idx" wx:for-item="itemName" 
         bindtap="showDetail" data-classifiy="{{itemName.id}}"  class="top-btn {{itemName.class}}">
@@ -11,9 +7,35 @@
       </view>
     </scroll-view>
 </view>
-<scroll-view scroll-y="true" class="content">
-    <view class="img-poster">
+<scroll-view scroll-y="true" class="content" bindscroll="onscroll" scroll-with-animation="true">
+    <view class="header">
+        <view class=""></view>
+    </view>
+    <view class="scrollmenu">
+        <scroll-view scroll-x="true" class="top-nav">
+        <view wx:for="{{mainClassify}}" wx:key="idx" wx:for-item="itemName" 
+            bindtap="showDetail" data-classifiy="{{itemName.id}}"  class="top-btn {{itemName.class}}">
+            {{itemName.name}}
+        </view>
+        </scroll-view>
+    </view>
+    <!-- <view class="img-poster">
         <image mode="scaleToFill" class="actual-img" src="{{showHotResource.titleImage}}"></image>
+    </view> -->
+    <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355px" height="400px"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="swiper-notify-row">
+         <view class="swiper-notify">
+            <image class="notify-img" mode="scaleToFill" src="../../images/green_tri.png"></image>
+            <text bindtap="goadlist" class="swiper-notify-text">春节期间放假通知</text>
+            <text class="swiper-notify-text" style="float:right;margin-top:5px;">></text>
+        </view>
     </view>
     <view class="col3">
          <view class="col3-h classify-title">
@@ -23,15 +45,19 @@
         <scroll-view scroll-x="true" class="col3-img-list">
             <view class="col3-img">
                 <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType1.top1.smallimageurl}}"></image>
+                <text class="c3-actual-img-footer">地段优，地铁口5分.\n地段优，地铁口5分.</text>
             </view>
             <view class="col3-img">
                 <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType1.top2.smallimageurl}}"></image>
+                <text class="c3-actual-img-footer">地段优，地铁口5分.\n地段优，地铁口5分.</text>
             </view>
             <view class="col3-img">
                 <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType1.top3.smallimageurl}}"></image>
+                <text class="c3-actual-img-footer">地段优，地铁口5分.\n地段优，地铁口5分.</text>
             </view>
             <view class="col3-img">
                 <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType1.top4.smallimageurl}}"></image>
+                <text class="c3-actual-img-footer">地段优，地铁口5分.\n地段优，地铁口5分.</text>
             </view>
         </scroll-view>
     </view>

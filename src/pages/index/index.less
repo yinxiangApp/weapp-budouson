@@ -1,3 +1,20 @@
+.menu{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    border-bottom:#eee solid 1px;
+    z-index: 100000;
+    background: #F5F5F5;
+}
+
+.menu.showHeader {
+    visibility: visible
+}
+
+.menu.hideHeader {
+    visibility: hidden
+}
+
 .header{
   position: releated;
   top: 0px;
@@ -7,13 +24,12 @@
   z-index: 100000;
 }
 
-.menu{
+.scrollmenu{
   position: releated;
   top: 42px;
   width: 100%;
-  // background: #fff;
   border-bottom:#eee solid 1px;
-  z-index: 100000
+  background: #F5F5F5;
 }
 
 .top-nav{
@@ -26,17 +42,18 @@
 .top-btn{
     display: inline-block;
     padding: 22rpx;
-    font: 18px/26px "Microsoft Yahei";
+    font: 12px/16px "Microsoft Yahei";
 }
 
 .top-hoverd-btn{
     color: #ffffff;
-    //border-bottom: #F44336 solid 1px;
     background-color: #f33737 
 }
 
 .classify-title{
-  font: 18px/16px "Microsoft Yahei";
+    margin-left: 10px;
+    font: 16px/16px "Microsoft Yahei";
+    font-weight: 500;
 }
 
 .content{
@@ -46,12 +63,40 @@
     height: 600px;
 }
 
-.img-poster{
-    margin: 1rpx;
-    padding: 5rpx;
+swiper{
+    width: 335;
+    max-width: 100%;
+    height: 200px;
     text-align: center;
-    box-sizing: border-box;
 }
+
+.swiper-notify-row{
+    display: flex;
+    flex-direction: column;
+    // margin: 20rpx 5rpx 0rpx 5rpx;
+    clear: both;
+}
+.swiper-notify{
+    padding: 10rpx;
+    background-color: #faf3d2;
+}
+
+.swiper-notify-text{
+    font: 11px/14px "Microsoft Yahei";
+    color: #565656
+}
+
+.notify-img{
+    width: 10px;
+    height: 10px;
+}
+
+// .img-poster{
+//     margin: 1rpx;
+//     padding: 5rpx;
+//     text-align: center;
+//     box-sizing: border-box;
+// }
 
 .actual-img{
     width: 370px;
@@ -59,10 +104,13 @@
 }
 
 .col3{
-    display: flex;
-    flex-direction: column;
-    margin: 15rpx 0;
-    clear: both;
+    display:flex;
+    flex-direction:column;
+    margin:0rpx;
+    clear:both;
+    border-top:#ccc solid 1px;
+    padding:30rpx 0;
+    
 }
 
 .col3-h{
@@ -74,11 +122,36 @@
 .col3-img{
     display: inline-block;
     margin: 0 1px;
+    position:relative;
 }
 
 .c3-actual-img{
     width: 130px;
     height: 180px;
+}
+
+.col3-img text {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:3;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.c3-actual-img-footer{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    margin:auto auto;
+    font:12px/24px "Microsoft Yahei";
+    font-weight:500;
+    background-color:#333;
+    color:#eee;
+    width:120px;    
+    padding:0px 5px;
+    z-index:2;
+    opacity: 0.8;
 }
 
 .col3-img-list{
