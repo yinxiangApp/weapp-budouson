@@ -51,9 +51,25 @@
 }
 
 .classify-title{
+    float:left;
     margin-left: 10px;
     font: 16px/16px "Microsoft Yahei";
     font-weight: 500;
+}
+
+.classify-title-text{
+    float:left;
+    width:20%;
+    height:26px;
+    line-height:26px;
+    // background:#fff;
+    border:none;
+    float:left;
+    margin:0 auto 10px auto;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:clip;
+    position:relative;
 }
 
 .content{
@@ -97,6 +113,51 @@ swiper{
 //     text-align: center;
 //     box-sizing: border-box;
 // }
+
+
+
+@keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+.marquee{
+    left: 20px;
+    width: 200px;
+    height:22px;
+    line-height:22px;
+    background:rgb(228, 76, 76);
+    color: rgb(248, 248, 248);
+    float:left;
+    margin:0 auto 10px auto;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:clip;
+    position:relative;
+    font-size:20rpx;
+    font-weight: 200;
+
+    border-width: 1px; //边缘的宽度，如果要分别设置可以这样：border-width: 15px 5px 15px 5px;依次为上、右、下、左  
+    border-style: solid;  
+    border-radius: 15px;    //圆角的大小  
+    border-color: rgb(228, 76, 76);;  //边框颜色，依次为上、右、下、左 
+    box-shadow: 1px 1px 1px rgb(228, 76, 76);;
+}
+.marquee-content{
+    display: inline-block;
+    position: relative;
+    padding-right: 0px;
+    animation: kf-marque-animation 8s linear infinite;
+    white-space: nowrap;
+}
+
+.classify-title-icon{
+    float:right;
+}
+
+.classify-title-icon icon{
+    display: inline-block;
+    position: relative;
+    padding-top: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
+}
 
 .actual-img{
     width: 370px;
@@ -168,3 +229,7 @@ swiper{
 .tag{
     margin: 3px 5px;
 }
+
+// .img-list2 {
+//     margin: 0px 20px;
+// }

@@ -1,3 +1,4 @@
+// import $classifycard from '../components/classifycard'
 const addata = require('../../data/addata').data
 
 // 获取全局应用程序实例对象
@@ -20,6 +21,25 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
+
+    classifycard1: {
+      theme: 'theme-red',
+      title: '民宿',
+      subtitle: '东京',
+      img: 'http://cms-bucket.nosdn.127.net/2ff27e9f5a7a47b290d15db91ed2d24220180209133310.png'
+    },
+    classifycard2: {
+      theme: 'theme-pink',
+      title: '一户建',
+      subtitle: '北区',
+      img: 'http://cms-bucket.nosdn.127.net/2ff27e9f5a7a47b290d15db91ed2d24220180209133310.png'
+    },
+    classifycard3: {
+      theme: 'theme-yellow',
+      title: '公寓',
+      subtitle: '新宿',
+      img: 'http://cms-bucket.nosdn.127.net/2ff27e9f5a7a47b290d15db91ed2d24220180209133310.png'
+    },
 
     // estate: 'top-hoverd-btn',
     // visa: '',

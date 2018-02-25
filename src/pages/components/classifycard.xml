@@ -1,0 +1,13 @@
+<template name="classifycard">
+    <view class="{{theme}} classifycard-warper">
+        <view class="{{theme}} classifycard-title">
+            <text class="{{theme}} classifycard-title-content">{{title}}</text>
+        </view>
+        <view class="{{theme}} classifycard-subtitle">
+            <text class="{{theme}} classifycard-subtitle-content">{{subtitle}}</text>
+        </view>
+        <view class="{{theme}} classifycard-img">
+            <image class="{{theme}} classifycard-img-content" mode="scaleToFill" src="{{img}}"></image>
+        </view>
+    </view>
+</template>

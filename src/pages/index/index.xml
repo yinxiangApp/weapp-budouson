@@ -1,4 +1,6 @@
 <import src="../common/common.wxml"/>
+<import src="../components/classifycard.wxml"/>
+
 <view class="menu {{fixheader}}">
     <scroll-view scroll-x="true" class="top-nav">
       <view wx:for="{{mainClassify}}" wx:key="idx" wx:for-item="itemName" 
@@ -39,8 +41,19 @@
     </view>
     <view class="col3">
          <view class="col3-h classify-title">
-            <text bindtap="goadlist" data-classifiy="{{showHotResource.hotType1}}">{{showHotResource.hotType1.title}}</text>
-            <icon type="search" size="16" style="float:right"></icon>
+            <view class="classify-title-text">
+                <text bindtap="goadlist" data-classifiy="{{showHotResource.hotType1}}">{{showHotResource.hotType1.title}}</text>
+            </view>
+            <view class="marquee">
+                <view class="marquee-content">
+                    <text>热门推荐</text> <text style="display: inline-block; width: 5em;"></text>
+                    <text>热门推荐</text> <text style="display: inline-block; width: 5em;"></text>
+                    <text>热门推荐</text> <text style="display: inline-block; width: 5em;"></text>
+                </view>
+            </view>
+            <view class="classify-title-icon">
+                <icon type="search" size="16"></icon>
+            </view>
         </view>
         <scroll-view scroll-x="true" class="col3-img-list">
             <view class="col3-img">
@@ -66,8 +79,8 @@
             <text bindtap="goadlist" data-classifiy="{{showHotResource.hotType2}}">{{showHotResource.hotType2.title}}</text>
             <icon type="search" size="16" style="float:right"></icon>
         </view>
-        <scroll-view scroll-x="true" class="col3-img-list">
-            <view class="col3-img">
+        <scroll-view scroll-x="true" class="col3-img-list img-list2">
+            <!-- <view class="col3-img">
                 <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType2.top1.smallimageurl}}"></image>
             </view>
             <view class="col3-img">
@@ -78,7 +91,11 @@
             </view>
             <view class="col3-img">
                 <image class="c3-actual-img" mode="scaleToFill" src="{{showHotResource.hotType2.top4.smallimageurl}}"></image>
-            </view>
+            </view> -->
+            <!-- <classifycard title="title" subtitle="subtitle" img="../../images/green_tri.png"></classifycard> -->
+            <template is="classifycard" data="{{ ...classifycard1 }}"/>
+            <template is="classifycard" data="{{ ...classifycard2 }}"/>
+            <template is="classifycard" data="{{ ...classifycard3 }}"/>
         </scroll-view>
     </view>
     <view class="col3">
